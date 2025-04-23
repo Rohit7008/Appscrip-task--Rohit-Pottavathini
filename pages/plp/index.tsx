@@ -5,11 +5,11 @@ import Header from '../../components/plp/Header';
 import SidebarFilters from '../../components/plp/SidebarFilters';
 import ProductGrid from '../../components/plp/ProductGrid';
 import Footer from '../../components/plp/Footer';
-import './plp.css';
+import styles from './plp.module.css';
 
 interface Product {
   id: number;
-  name: string;
+  title: string;
   price: number;
   image: string;
   description: string;
@@ -36,6 +36,11 @@ export default function PLP({ products: initialProducts, categories }: PLPProps)
         ? prev[filterType].filter(v => v !== value)
         : [...(prev[filterType] || []), value]
     }));
+  };
+
+  const handleAddToCart = (product: Product) => {
+    // TODO: Implement cart functionality
+    console.log('Adding to cart:', product);
   };
 
   return (
@@ -65,7 +70,7 @@ export default function PLP({ products: initialProducts, categories }: PLPProps)
                 "position": index + 1,
                 "item": {
                   "@type": "Product",
-                  "name": product.name,
+                  "name": product.title,
                   "description": product.description,
                   "image": product.image,
                   "offers": {
@@ -82,25 +87,26 @@ export default function PLP({ products: initialProducts, categories }: PLPProps)
 
       <Header />
       
-      <main className="plp">
-        <div className="container">
-          <div className="plp__header">
-            <h1 className="plp__title">Latest Collection</h1>
-            <p className="plp__description">Discover our curated selection of premium products</p>
+      <main className={styles.plp}>
+        <div className={styles.container}>
+          <div className={styles.header}>
+            <h1 className={styles.title}>Latest Collection</h1>
+            <p className={styles.description}>Discover our curated selection of premium products</p>
           </div>
           
-          <div className="plp__content">
-            <aside className="plp__sidebar">
+          <div className={styles.content}>
+            <aside className={styles.sidebar}>
               <SidebarFilters
                 onFilterChange={handleFilterChange}
                 selectedFilters={selectedFilters}
               />
             </aside>
             
-            <section className="plp__products">
+            <section className={styles.products}>
               <ProductGrid
                 products={products}
-                loading={loading}
+                isLoading={loading}
+                onAddToCart={handleAddToCart}
               />
             </section>
           </div>

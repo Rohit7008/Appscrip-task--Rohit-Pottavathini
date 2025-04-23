@@ -1,5 +1,5 @@
 import React from 'react';
-import './SidebarFilters.css';
+import styles from './SidebarFilters.module.css';
 
 interface FilterOption {
   id: string;
@@ -24,53 +24,43 @@ const SidebarFilters: React.FC<SidebarFiltersProps> = ({
   ];
 
   return (
-    <aside className="sidebar-filters">
-      <div className="sidebar-filters__header">
-        <h2 className="sidebar-filters__title">Filters</h2>
-        <button className="sidebar-filters__clear">Clear All</button>
-      </div>
-
-      <div className="sidebar-filters__section">
-        <h3 className="sidebar-filters__section-title">Categories</h3>
-        <ul className="sidebar-filters__list">
+    <div className={styles.filters}>
+      <div className={styles.section}>
+        <h3 className={styles.title}>Categories</h3>
+        <ul className={styles.list}>
           {categories.map((category) => (
-            <li key={category.id} className="sidebar-filters__item">
-              <label className="sidebar-filters__label">
+            <li key={category.id} className={styles.item}>
+              <label className={styles.checkbox}>
                 <input
                   type="checkbox"
-                  className="sidebar-filters__checkbox"
                   checked={selectedFilters.categories?.includes(category.id)}
                   onChange={() => onFilterChange('categories', category.id)}
                 />
-                <span className="sidebar-filters__text">{category.label}</span>
-                <span className="sidebar-filters__count">({category.count})</span>
+                <span className={styles.label}>{category.label}</span>
               </label>
             </li>
           ))}
         </ul>
       </div>
 
-      <div className="sidebar-filters__section">
-        <h3 className="sidebar-filters__section-title">Price Range</h3>
-        <div className="sidebar-filters__price">
-          <div className="sidebar-filters__price-inputs">
-            <input
-              type="number"
-              placeholder="Min"
-              className="sidebar-filters__price-input"
-              onChange={(e) => onFilterChange('priceMin', e.target.value)}
-            />
-            <span className="sidebar-filters__price-separator">-</span>
-            <input
-              type="number"
-              placeholder="Max"
-              className="sidebar-filters__price-input"
-              onChange={(e) => onFilterChange('priceMax', e.target.value)}
-            />
-          </div>
+      <div className={styles.section}>
+        <h3 className={styles.title}>Price Range</h3>
+        <div className={styles.priceRange}>
+          <input
+            type="number"
+            className={styles.priceInput}
+            placeholder="Min"
+            onChange={(e) => onFilterChange('priceMin', e.target.value)}
+          />
+          <input
+            type="number"
+            className={styles.priceInput}
+            placeholder="Max"
+            onChange={(e) => onFilterChange('priceMax', e.target.value)}
+          />
         </div>
       </div>
-    </aside>
+    </div>
   );
 };
 
