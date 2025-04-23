@@ -1,0 +1,438 @@
+.footer {
+  background: #000000;
+  color: #FFFFFF;
+  padding: 80px 0 40px;
+}
+
+.topContainer {
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 0 120px;
+  display: flex;
+  justify-content: space-between;
+  gap: 160px;
+}
+
+/* Subscribe Section */
+.subscribeSection {
+  max-width: 720px;
+  flex: 2;
+}
+
+.title {
+  font-family: var(--font-sans);
+  font-size: 24px;
+  font-weight: 500;
+  margin: 0 0 20px 0;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: #FFFFFF;
+}
+
+.subtitle {
+  font-family: var(--font-sans);
+  font-size: 18px;
+  color: rgba(255, 255, 255, 0.6);
+  margin: 0 0 40px 0;
+  line-height: 1.5;
+  max-width: 600px;
+}
+
+.subscribeForm {
+  display: flex;
+  gap: 20px;
+  max-width: 600px;
+}
+
+.emailInput {
+  flex: 1;
+  height: 60px;
+  padding: 0 32px;
+  background: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  color: #FFFFFF;
+  font-family: var(--font-sans);
+  font-size: 18px;
+  border-radius: 0;
+}
+
+.emailInput::placeholder {
+  color: rgba(255, 255, 255, 0.4);
+  font-size: 18px;
+}
+
+.emailInput:focus {
+  outline: none;
+  border-color: rgba(255, 255, 255, 0.4);
+}
+
+.subscribeButton {
+  height: 60px;
+  padding: 0 48px;
+  background: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  color: #FFFFFF;
+  font-family: var(--font-sans);
+  font-size: 18px;
+  font-weight: 400;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  text-transform: capitalize;
+  border-radius: 0;
+  letter-spacing: 0.02em;
+  white-space: nowrap;
+}
+
+.subscribeButton:hover {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+/* Right Section */
+.rightSection {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  min-width: 280px;
+  flex: 1;
+}
+
+.contactSection, .currencySection {
+  text-align: left;
+}
+
+.contactSection .title,
+.currencySection .title {
+  font-size: 16px;
+  margin-bottom: 16px;
+}
+
+.contactLink {
+  display: block;
+  font-size: 16px;
+  color: rgba(255, 255, 255, 0.6);
+  text-decoration: none;
+  margin-bottom: 8px;
+  line-height: 1.4;
+  letter-spacing: 0.02em;
+}
+
+.contactLink:last-child {
+  margin-bottom: 0;
+}
+
+.contactLink:hover {
+  color: #FFFFFF;
+}
+
+.currencySelector {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 16px;
+  margin-bottom: 12px;
+}
+
+.flag {
+  width: 24px;
+  height: 24px;
+  object-fit: contain;
+  vertical-align: middle;
+}
+
+.currencyCode {
+  font-size: 16px;
+  color: rgba(255, 255, 255, 0.6);
+  letter-spacing: 0.02em;
+}
+
+.currencyNote {
+  font-size: 14px;
+  color: rgba(255, 255, 255, 0.4);
+  max-width: 320px;
+  line-height: 1.6;
+  margin: 0;
+  letter-spacing: 0.02em;
+  text-align: left;
+}
+
+/* Responsive Styles */
+@media (max-width: 1200px) {
+  .topContainer {
+    padding: 0 80px;
+    gap: 80px;
+  }
+  
+  .subscribeSection {
+    max-width: 600px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .topContainer {
+    padding: 0 40px;
+    gap: 60px;
+  }
+  
+  .subscribeSection {
+    max-width: 520px;
+  }
+  
+  .title {
+    font-size: 20px;
+  }
+  
+  .subtitle {
+    font-size: 16px;
+  }
+  
+  .emailInput,
+  .subscribeButton {
+    height: 56px;
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 768px) {
+  .footer {
+    padding: 60px 0 40px;
+  }
+
+  .topContainer {
+    flex-direction: column;
+    padding: 0 24px;
+    gap: 40px;
+  }
+  
+  .subscribeSection {
+    max-width: none;
+    width: 100%;
+  }
+  
+  .subscribeForm {
+    flex-direction: column;
+    gap: 12px;
+    width: 100%;
+  }
+  
+  .rightSection {
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+    gap: 24px;
+  }
+  
+  .currencySelector {
+    justify-content: flex-start;
+  }
+  
+  .currencyNote {
+    max-width: 100%;
+  }
+  
+  .paymentMethods {
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    gap: 16px;
+  }
+  
+  .paymentMethods img {
+    width: 40px;
+    height: 26px;
+  }
+  
+  .bottomContainer {
+    padding: 0 24px;
+  }
+  
+  .footerColumns {
+    flex-direction: column;
+    gap: 32px;
+  }
+  
+  .footerColumn {
+    width: 100%;
+    text-align: left;
+  }
+  
+  .columnLinks {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+  }
+}
+
+@media (max-width: 480px) {
+  .footer {
+    padding: 40px 0 24px;
+  }
+  
+  .topContainer {
+    padding: 0 16px;
+    gap: 32px;
+  }
+  
+  .subscribeForm {
+    gap: 10px;
+  }
+  
+  .subscribeButton {
+    padding: 0 24px;
+    width: 100%;
+  }
+  
+  .title {
+    font-size: 18px;
+    margin-bottom: 12px;
+  }
+  
+  .subtitle {
+    font-size: 14px;
+    margin-bottom: 24px;
+  }
+  
+  .rightSection {
+    flex-direction: column;
+    gap: 28px;
+  }
+  
+  .emailInput,
+  .subscribeButton {
+    height: 50px;
+    font-size: 16px;
+  }
+  
+  .paymentMethods {
+    margin-top: 16px;
+  }
+  
+  .paymentMethods img {
+    width: 36px;
+    height: 24px;
+  }
+  
+  .columnLinks {
+    grid-template-columns: 1fr;
+    gap: 10px;
+  }
+  
+  .bottomContainer {
+    padding: 0 16px;
+  }
+  
+  .copyright {
+    margin-top: 24px;
+    font-size: 12px;
+  }
+}
+
+.divider {
+  height: 1px;
+  background: rgba(255, 255, 255, 0.15);
+  margin: 60px auto;
+  max-width: 1280px;
+}
+
+.bottomContainer {
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 0 80px;
+}
+
+.footerColumns {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 80px;
+}
+
+.footerColumn {
+  display: flex;
+  flex-direction: column;
+}
+
+.brandName {
+  font-size: 20px;
+  font-weight: 500;
+  margin: 0 0 32px;
+  color: #FFFFFF;
+}
+
+.columnTitle {
+  font-size: 16px;
+  font-weight: 600;
+  margin: 0 0 32px;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: #FFFFFF;
+}
+
+.columnLinks {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.columnLinks a {
+  font-size: 16px;
+  color: rgba(255, 255, 255, 0.6);
+  text-decoration: none;
+  transition: color 0.2s ease;
+  line-height: 1.5;
+}
+
+.columnLinks a:hover {
+  color: #FFFFFF;
+}
+
+.socialLinks {
+  display: flex;
+  gap: 24px;
+  margin: 0 0 32px;
+}
+
+.socialLinks a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.1);
+  transition: background 0.2s ease;
+}
+
+.paymentSection {
+  margin-top: 40px;
+}
+
+.paymentTitle {
+  font-size: 16px;
+  font-weight: 500;
+  letter-spacing: 0.02em;
+  margin-bottom: 24px;
+  color: #FFFFFF;
+}
+
+.paymentMethods {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 40px;
+}
+
+.paymentMethods img {
+  width: 56px;
+  height: 35px;
+  opacity: 0.9;
+  transition: opacity 0.2s ease;
+}
+
+.paymentMethods img:hover {
+  opacity: 1;
+}
+
+.copyright {
+  text-align: center;
+  font-size: 12px;
+  color: rgba(255, 255, 255, 0.4);
+  margin-top: 60px;
+}

@@ -1,0 +1,560 @@
+/* Announcement Bar */
+.announcementBar {
+  background: #000;
+  padding: 12px 0;
+  color: #fff;
+}
+
+.announcementContainer {
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 0 32px;
+  display: flex;
+  justify-content: center;
+  gap: 48px;
+}
+
+.announcement {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  font-size: 13px;
+  font-weight: 500;
+}
+
+.announcement span {
+  color: #E6007E;
+}
+
+/* Header Component Styles */
+.header {
+  width: 100%;
+  max-width: 1440px;
+  height: 220px;
+  margin: 0 auto;
+  background: #FFFFFF;
+  border: none;
+  padding: 0;
+}
+
+.topBar {
+  background: #000;
+  color: #fff;
+  padding: 8px 0;
+}
+
+.topBarContent {
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 0 24px;
+  display: flex;
+  justify-content: center;
+  gap: 24px;
+}
+
+.topBarLink {
+  color: #fff;
+  text-decoration: none;
+  font-size: 12px;
+  line-height: 16px;
+}
+
+.mainHeader {
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 0;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  position: relative;
+  height: 180px;
+  border-bottom: 1px solid #E6E6E6;
+}
+
+.logoWrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 36.00003px;
+  height: 36px;
+  position: absolute;
+  top: 24px;
+  left: 96px;
+}
+
+.logoImage {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  display: block;
+}
+
+.centerContent {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0;
+  margin: 0;
+  padding: 0;
+}
+
+.logoText {
+  font-family: 'Inter', sans-serif;
+  font-size: 36px;
+  font-weight: 800;
+  line-height: 100%;
+  letter-spacing: 1px;
+  color: #000000;
+  margin: 0;
+  text-transform: uppercase;
+  vertical-align: middle;
+  width: 107px;
+  height: 44px;
+  position: absolute;
+  top: 20px;
+  left: 667px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  white-space: nowrap;
+}
+
+.logo {
+  display: block;
+  width: 36px;
+  height: 36px;
+  position: relative;
+  margin-right: 12px;
+}
+
+.logoSvg {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  display: block;
+}
+
+.mainNav {
+  display: flex;
+  align-items: center;
+  width: 636px;
+  height: 24px;
+  position: absolute;
+  top: 140px;
+  left: 402px;
+  gap: 64px;
+  justify-content: center;
+  margin: 0;
+  padding-bottom: 0;
+}
+
+.navLink {
+  font-family: 'Simplon Norm', sans-serif;
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 100%;
+  letter-spacing: 1px;
+  color: #000000;
+  text-decoration: none;
+  text-transform: uppercase;
+  vertical-align: middle;
+  position: relative;
+  height: 24px;
+  display: flex;
+  align-items: center;
+  white-space: nowrap;
+  padding: 0;
+  margin: 0;
+}
+
+.navLink::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 1px;
+  bottom: 0;
+  left: 0;
+  background-color: #000000;
+  transition: width 0.3s ease;
+}
+
+.navLink:hover::after {
+  width: 100%;
+}
+
+.navLink:hover {
+  color: #666666;
+}
+
+.headerActions {
+  display: flex;
+  align-items: center;
+  width: 244px;
+  height: 24px;
+  position: absolute;
+  top: 30px;
+  left: 1100px;
+  gap: 24px;
+}
+
+.actionButton {
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 20px;
+  height: 20px;
+  transition: opacity 0.2s ease;
+}
+
+.actionButton:hover {
+  opacity: 0.7;
+}
+
+.langButton {
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  font-family: 'Simplon Norm', sans-serif;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 100%;
+  letter-spacing: 1px;
+  color: #000000;
+  text-transform: uppercase;
+  vertical-align: middle;
+  text-transform: uppercase;
+  leading-trim: cap height;
+  -webkit-leading-trim: cap height;
+}
+
+.langButton svg {
+  margin-top: 0;
+}
+
+/* Search input styles */
+.searchWrapper {
+  flex: 1;
+  max-width: 600px;
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.searchInput {
+  width: 100%;
+  height: 40px;
+  padding: 0 44px 0 16px; /* Extra padding for search icon */
+  border: 1px solid #CCCCCC;
+  border-radius: 6px;
+  font-family: 'Inter', sans-serif;
+  font-size: 14px;
+  line-height: 20px;
+  color: #333333;
+  background-color: #ffffff;
+  transition: border-color 0.2s ease;
+}
+
+.searchInput::placeholder {
+  color: #999999;
+}
+
+.searchInput:focus {
+  outline: none;
+  border-color: #333333;
+}
+
+.searchButton {
+  position: absolute;
+  right: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  background: none;
+  border: none;
+  padding: 4px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.searchButton:hover svg path {
+  fill: #666666;
+}
+
+/* Icons section styles */
+.icons {
+  display: flex;
+  gap: 24px;
+  align-items: center;
+}
+
+.iconButton {
+  background: none;
+  border: none;
+  padding: 8px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.2s ease;
+}
+
+.iconButton:hover {
+  transform: scale(1.1);
+}
+
+.iconButton svg path {
+  transition: stroke 0.2s ease;
+}
+
+.iconButton:hover svg path {
+  stroke: #666666;
+}
+
+/* Responsive styles */
+@media (max-width: 1200px) {
+  .mainNav {
+    gap: 48px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: auto;
+  }
+  
+  .logoWrapper {
+    left: 50px;
+  }
+  
+  .logoText {
+    left: auto;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  
+  .headerActions {
+    right: 50px;
+    width: auto;
+    gap: 16px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .mainNav {
+    gap: 32px;
+    width: auto;
+  }
+  
+  .navLink {
+    font-size: 18px;
+  }
+  
+  .headerActions {
+    width: auto;
+    right: 30px;
+    gap: 12px;
+  }
+  
+  .announcementContainer {
+    padding: 0 16px;
+    gap: 24px;
+  }
+  
+  .announcement {
+    font-size: 12px;
+  }
+}
+
+@media (max-width: 768px) {
+  .header {
+    height: 160px;
+  }
+  
+  .mainHeader {
+    height: 120px;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .logoWrapper {
+    position: static;
+    margin-top: 16px;
+  }
+  
+  .logoText {
+    position: static;
+    transform: none;
+    margin-top: 8px;
+  }
+  
+  .mainNav {
+    position: static;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    margin-top: 10px;
+    padding-bottom: 10px;
+    width: 100%;
+    height: auto;
+  }
+  
+  .navLink {
+    font-size: 16px;
+    height: 20px;
+  }
+  
+  .headerActions {
+    position: absolute;
+    top: 16px;
+    right: 16px;
+    gap: 8px;
+  }
+  
+  .actionButton {
+    width: 28px;
+    height: 28px;
+  }
+  
+  .langButton {
+    padding: 4px 8px;
+    font-size: 12px;
+  }
+  
+  .announcementContainer {
+    flex-direction: column;
+    gap: 8px;
+    padding: 8px 16px;
+    align-items: center;
+  }
+  
+  .announcement {
+    font-size: 11px;
+    text-align: center;
+  }
+  
+  .searchWrapper {
+    display: none;
+  }
+}
+
+@media (max-width: 600px) {
+  .header {
+    height: auto;
+  }
+  
+  .mainHeader {
+    padding: 16px 12px;
+    height: auto;
+  }
+  
+  .mainNav {
+    overflow-x: auto;
+    justify-content: flex-start;
+    padding: 0 12px 10px;
+    gap: 16px;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none; /* Firefox */
+    -ms-overflow-style: none; /* IE and Edge */
+  }
+  
+  .mainNav::-webkit-scrollbar {
+    display: none; /* Chrome, Safari, Opera */
+  }
+  
+  .navLink {
+    font-size: 14px;
+    white-space: nowrap;
+    flex-shrink: 0;
+  }
+  
+  .topBarContent {
+    flex-direction: column;
+    gap: 4px;
+    align-items: center;
+    padding: 6px 12px;
+  }
+  
+  .topBarLink {
+    font-size: 11px;
+  }
+}
+
+@media (max-width: 480px) {
+  .header {
+    height: auto;
+  }
+  
+  .mainHeader {
+    padding: 12px 8px;
+  }
+  
+  .logoText {
+    font-size: 28px;
+  }
+  
+  .mainNav {
+    gap: 12px;
+    padding: 0 8px 8px;
+  }
+  
+  .navLink {
+    font-size: 13px;
+  }
+  
+  .headerActions .actionButton:nth-last-child(2),
+  .headerActions .actionButton:nth-last-child(3) {
+    display: none;
+  }
+  
+  .announcementContainer {
+    padding: 6px 8px;
+  }
+  
+  .announcement {
+    font-size: 10px;
+  }
+}
+
+/* Focus styles for accessibility */
+.searchInput:focus-visible,
+.searchButton:focus-visible,
+.iconButton:focus-visible {
+  outline: 2px solid #333333;
+  outline-offset: 2px;
+}
+
+.discoverHeading {
+  font-family: 'Simplon Norm', sans-serif;
+  font-weight: 400;
+  font-size: 60px;
+  line-height: 100%;
+  letter-spacing: 1px;
+  text-align: center;
+  vertical-align: middle;
+  text-transform: uppercase;
+  color: #252020;
+  margin: 48px 0 24px;
+}
+
+.discoverText {
+  font-family: 'Simplon Norm', sans-serif;
+  font-weight: 400;
+  font-size: 22px;
+  line-height: 40px;
+  text-align: center;
+  color: #252020;
+  max-width: 1000px;
+  margin: 0 auto 48px;
+} 

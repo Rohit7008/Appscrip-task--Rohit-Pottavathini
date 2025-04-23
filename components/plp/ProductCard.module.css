@@ -1,0 +1,301 @@
+.productCard {
+  position: relative;
+  background: #FFFFFF;
+  width: 100%;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.productCard:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+.imageContainer {
+  position: relative;
+  width: 100%;
+  padding-bottom: 120%;
+  background: #F5F5F5;
+  overflow: hidden;
+}
+
+.image {
+  object-fit: contain;
+  padding: 16px;
+  transition: transform 0.3s ease;
+}
+
+.productCard:hover .image {
+  transform: scale(1.05);
+}
+
+.imageFallback {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #F5F5F5;
+  color: #666666;
+  font-size: 14px;
+}
+
+.outOfStock {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  right: 0;
+  transform: translateY(-50%);
+  background: rgba(255, 255, 255, 0.9);
+  color: #000000;
+  padding: 16px;
+  font-family: var(--font-sans);
+  font-size: 14px;
+  font-weight: 500;
+  text-transform: uppercase;
+  text-align: center;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  pointer-events: none;
+  backdrop-filter: blur(2px);
+}
+
+.content {
+  padding: 16px 8px 8px;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.productInfo {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 12px;
+}
+
+.textContent {
+  flex: 1;
+  min-width: 0;
+}
+
+.productName {
+  font-family: var(--font-sans);
+  font-size: 14px;
+  font-weight: 600;
+  color: #1E1E1E;
+  margin: 0 0 8px 0;
+  text-transform: uppercase;
+  line-height: 1.3;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  height: 36px;
+}
+
+.signInRow {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  margin-top: 4px;
+}
+
+.signInText {
+  font-family: var(--font-sans);
+  font-size: 12px;
+  color: #666666;
+  margin: 0;
+  text-decoration: underline;
+}
+
+.wishlistButton {
+  background: none;
+  border: none;
+  padding: 0;
+  margin: 0;
+  cursor: pointer;
+  color: #1E1E1E;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 20px;
+  flex-shrink: 0;
+  transition: color 0.2s ease;
+}
+
+.wishlistButton:hover {
+  color: #FF4646;
+}
+
+.wishlisted {
+  color: #FF4646;
+}
+
+.wishlisted svg path {
+  fill: currentColor;
+}
+
+.priceSection {
+  margin-top: 0;
+  margin-bottom: 12px;
+}
+
+.price {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #2c5282;
+  margin: 0.5rem 0;
+}
+
+.addToCartButton {
+  margin-top: auto;
+  padding: 0.75rem 1rem;
+  background-color: #2c5282;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+  width: 100%;
+}
+
+.addToCartButton:hover {
+  background-color: #2a4365;
+}
+
+.addToCartButton:focus {
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(44, 82, 130, 0.3);
+}
+
+.newProduct {
+  position: absolute;
+  top: 12px;
+  left: 12px;
+  color: #000000;
+  padding: 0;
+  font-family: var(--font-sans);
+  font-size: 12px;
+  font-weight: 600;
+  text-transform: uppercase;
+  z-index: 1;
+  letter-spacing: 0.02em;
+  background: none;
+  box-shadow: none;
+}
+
+/* Tablet Styles */
+@media (max-width: 992px) {
+  .imageContainer {
+    padding-bottom: 110%;
+  }
+  
+  .productName {
+    font-size: 13px;
+    height: 34px;
+  }
+  
+  .price {
+    font-size: 1.1rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .imageContainer {
+    padding-bottom: 100%;
+  }
+  
+  .content {
+    padding: 10px 4px;
+  }
+  
+  .productName {
+    font-size: 12px;
+    -webkit-line-clamp: 2;
+    height: 32px;
+  }
+  
+  .price {
+    font-size: 1.1rem;
+    margin: 0.4rem 0;
+  }
+  
+  .addToCartButton {
+    padding: 0.6rem 0.8rem;
+    font-size: 0.9rem;
+  }
+  
+  .signInText {
+    font-size: 11px;
+  }
+}
+
+/* Mobile Styles */
+@media (max-width: 600px) {
+  .productName {
+    font-size: 12px;
+    height: 32px;
+    margin-bottom: 6px;
+  }
+  
+  .price {
+    font-size: 1rem;
+    margin: 0.3rem 0;
+  }
+}
+
+@media (max-width: 480px) {
+  .imageContainer {
+    padding-bottom: 100%;
+  }
+  
+  .content {
+    padding: 8px 2px;
+  }
+  
+  .productInfo {
+    gap: 8px;
+  }
+  
+  .price {
+    font-size: 1rem;
+  }
+  
+  .addToCartButton {
+    padding: 0.6rem 0.75rem;
+    font-size: 0.9rem;
+    margin-top: 8px;
+  }
+  
+  .priceSection {
+    margin-bottom: 8px;
+  }
+}
+
+@media (max-width: 375px) {
+  .imageContainer {
+    padding-bottom: 90%;
+  }
+  
+  .productName {
+    font-size: 11px;
+    height: 30px;
+  }
+  
+  .price {
+    font-size: 0.95rem;
+  }
+  
+  .addToCartButton {
+    padding: 0.5rem 0.7rem;
+    font-size: 0.85rem;
+  }
+}
